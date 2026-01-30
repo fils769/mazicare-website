@@ -626,7 +626,7 @@ export const translations = {
             pricing: "Pricing",
             contact: "Contact",
             login: "Login",
-            verified: "The care your loved ones deserve",
+            verified: "The care your loved ones deserve.",
             mobileSubtitle: "Verified elderly care professionals across Greece",
             loginFull: "Login to MaziCare",
         },
