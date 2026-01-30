@@ -199,8 +199,7 @@ function ContactInfo() {
                             <h4 className="font-semibold text-[#030213]">{t.contact.info.hours}</h4>
                             <p className="text-[#717182]">
                                 {t.contact.info.hoursWeekdays}<br />
-                                {t.contact.info.hoursSaturday}<br />
-                                {t.contact.info.hoursSunday}
+                            
                             </p>
                         </div>
                     </div>

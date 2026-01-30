@@ -448,7 +448,7 @@ export const translations = {
                 phone: "Τηλέφωνο",
                 email: "Email",
                 hours: "Ωράριο Λειτουργίας",
-                hoursWeekdays: "Δευτέρα - Παρασκευή: 9:00 - 18:00",
+                hoursWeekdays: "Δευτέρα - Παρασκευή: 9:00 - 17:00",
                 hoursSaturday: "Σάββατο: 10:00 - 14:00",
                 hoursSunday: "Κυριακή: Κλειστά"
             },
@@ -1060,7 +1060,7 @@ export const translations = {
                 phone: "Phone",
                 email: "Email",
                 hours: "Opening Hours",
-                hoursWeekdays: "Monday - Friday: 9:00 - 18:00",
+                hoursWeekdays: "Monday - Friday: 9:00 - 17:00",
                 hoursSaturday: "Saturday: 10:00 - 14:00",
                 hoursSunday: "Sunday: Closed"
             },
