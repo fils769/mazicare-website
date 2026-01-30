@@ -114,7 +114,7 @@ export function Footer() {
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <SocialLink href="https://facebook.com/mazicare">
+                <SocialLink href="https://www.facebook.com/profile.php?id=61582675223458&mibextid=wwXIfr">
                   <Facebook className="h-5 w-5 flex-shrink-0 mt-1" />
                 </SocialLink>
                 <SocialLink href="https://www.instagram.com/mazicare">
