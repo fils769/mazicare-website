@@ -208,10 +208,10 @@ export const translations = {
                 step2Note: "Όλοι οι φροντιστές περνούν αυστηρούς ελέγχους ιστορικού και συνεντεύξεις",
                 step3Title: "3. Γνωρίστε, επιλέξτε και ξεκινήστε τη φροντίδα",
                 step3Desc: "Προγραμματίστε συνεντεύξεις και επιλέξτε τον τέλειο φροντιστή",
-                step3Note: "Διευκολύνουμε τις γνωριμίες και βοηθάμε στις αρχικές συναντήσεις",
+                step3Note: "Σας διευκολύνουμε να επιλέξετε τους φροντιστές.",
                 step4Title: "4. Παρακολουθήστε και διαχειριστείτε τη φροντίδα",
                 step4Desc: "Χρησιμοποιήστε τον πίνακα ελέγχου MaziCare για ενημερώσεις και επικοινωνία",
-                step4Note: "Ενημερώσεις σε πραγματικό χρόνο και υποστήριξη 24/7 διασφαλίζουν την ηρεμία"
+                step4Note: "Οι ενημερώσεις σε πραγματικό χρόνο και η υποστήριξη εξασφαλίζουν ηρεμία."
             },
             whyMaziCare: {
                 title: "Γιατί να επιλέξετε τη MaziCare έναντι εναλλακτικών;",
@@ -229,7 +229,7 @@ export const translations = {
                 safetyLink: "Μάθετε για τη διαδικασία ασφαλείας μας"
             },
             safety: {
-                title: "Η διαδικασία 5 βημάτων ασφαλείας & επαλήθευσης",
+                title: "Η διαδικασία ασφάλειας και επαλήθευσης",
                 subtitle: "Κάθε φροντιστής της MaziCare περνά από αυστηρή επιθεώρηση πριν ενταχθεί στην πλατφόρμα μας. Δεν αφήνουμε τίποτα στην τύχη όταν πρόκειται για την ασφάλεια της οικογένειάς σας.",
                 step1Title: "Επαλήθευση Ταυτότητας",
                 step1Desc: "Επαλήθευση ταυτότητας και εγκυρότητας προσωπικών στοιχείων",
@@ -820,10 +820,10 @@ export const translations = {
                 step2Note: "All caregivers undergo strict background checks and interviews",
                 step3Title: "3. Meet, choose and start care",
                 step3Desc: "Schedule interviews and choose the perfect caregiver",
-                step3Note: "We facilitate introductions and help with initial meetings",
+                step3Note: "We make it easier for you to choose the caregivers.",
                 step4Title: "4. Monitor and manage care",
                 step4Desc: "Use the MaziCare dashboard for updates and communication",
-                step4Note: "Real-time updates and 24/7 support ensure peace of mind"
+                step4Note: "Real-time updates and support ensure peace of mind"
             },
             whyMaziCare: {
                 title: "Why choose MaziCare over alternatives?",
@@ -841,7 +841,7 @@ export const translations = {
                 safetyLink: "Learn about our safety process"
             },
             safety: {
-                title: "The 5-step safety & verification process",
+                title: "The safety & verification process",
                 subtitle: "Every MaziCare caregiver undergoes strict inspection before joining our platform. We leave nothing to chance when it comes to your family's safety.",
                 step1Title: "Identity Verification",
                 step1Desc: "Verification of identity and validity of personal data",

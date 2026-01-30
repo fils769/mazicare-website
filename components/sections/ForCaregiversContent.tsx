@@ -97,37 +97,6 @@ function WhoCanApply() {
                                 ))}
                             </ul>
                         </div>
-
-                        <div className="bg-accent rounded-xl p-6 border border-border">
-                            <h3 className="text-xl font-semibold text-foreground mb-4">{t.forCaregivers.whoCanApply.experienceTitle}</h3>
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-sidebar-primary/10 rounded-full flex items-center justify-center">
-                                    <span className="text-sidebar-primary font-bold">1-2</span>
-                                </div>
-                                <div>
-                                    <p className="text-foreground font-medium">{t.forCaregivers.whoCanApply.experienceYears}</p>
-                                    <p className="text-foreground/70 text-sm">{t.forCaregivers.whoCanApply.experienceField}</p>
-                                </div>
-                            </div>
-                            <p className="text-foreground/90">{t.forCaregivers.whoCanApply.experienceNote}</p>
-                        </div>
-                    </div>
-
-                    <div className="space-y-6">
-                        <div className="bg-accent rounded-xl p-6 border border-border">
-                            <h3 className="text-xl font-semibold text-foreground mb-4">{t.forCaregivers.whoCanApply.certTitle}</h3>
-                            <ul className="space-y-3">
-                                {[t.forCaregivers.whoCanApply.cert1, t.forCaregivers.whoCanApply.cert2, t.forCaregivers.whoCanApply.cert3, t.forCaregivers.whoCanApply.cert4].map((cert, index) => (
-                                    <li key={index} className="flex items-start gap-2">
-                                        <svg className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        <span className="text-foreground/90">{cert}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
                         <div className="bg-accent rounded-xl p-6 border border-border">
                             <h3 className="text-xl font-semibold text-foreground mb-4">{t.forCaregivers.whoCanApply.langTitle}</h3>
                             <div className="space-y-3">
@@ -145,6 +114,25 @@ function WhoCanApply() {
                                 </div>
                             </div>
                         </div>
+                   
+                    </div>
+
+                    <div className="space-y-6">
+                        <div className="bg-accent rounded-xl p-6 border border-border">
+                            <h3 className="text-xl font-semibold text-foreground mb-4">{t.forCaregivers.whoCanApply.certTitle}</h3>
+                            <ul className="space-y-3">
+                                {[t.forCaregivers.whoCanApply.cert1, t.forCaregivers.whoCanApply.cert2, t.forCaregivers.whoCanApply.cert3, t.forCaregivers.whoCanApply.cert4].map((cert, index) => (
+                                    <li key={index} className="flex items-start gap-2">
+                                        <svg className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span className="text-foreground/90">{cert}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                   
                     </div>
                 </div>
             </div>
