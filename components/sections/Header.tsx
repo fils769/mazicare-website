@@ -6,10 +6,12 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/lib/language-context";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,49 +40,54 @@ export function Header() {
           {/* Trust statement - μόνο για μεγάλες οθόνες */}
           <div className="hidden xl:flex items-center text-sm text-[#717182] mx-4 flex-shrink-0">
             <span className="border-l border-gray-300 pl-4 whitespace-nowrap">
-               Επαληθευμένοι φροντιστές σε όλη την Ελλάδα
+              {t.header.verified}
             </span>
           </div>
 
-          {/* Desktop Navigation - βελτιωμένο για ελληνικά */}
-          <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 flex-1 justify-end">
-            <div className="flex items-center space-x-2 xl:space-x-4">
+          {/* Desktop Navigation - optimized spacing for Greek */}
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 flex-1 justify-end">
+            <div className="flex items-center space-x-1 xl:space-x-2">
               <Link
                 href="/find-care"
-                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm xl:text-base whitespace-nowrap px-2 py-1"
+                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm whitespace-nowrap px-1.5 xl:px-2 py-1"
               >
-                Βρείτε Φροντίδα
+                {t.header.findCare}
               </Link>
               <Link
                 href="/for-caregivers"
-                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm xl:text-base whitespace-nowrap px-2 py-1"
+                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm whitespace-nowrap px-1.5 xl:px-2 py-1"
               >
-                Για Φροντιστές
+                {t.header.forCaregivers}
               </Link>
               <Link
                 href="/pricing"
-                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm xl:text-base whitespace-nowrap px-2 py-1"
+                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm whitespace-nowrap px-1.5 xl:px-2 py-1"
               >
-                Τιμολόγηση
+                {t.header.pricing}
               </Link>
               <Link
                 href="/contact"
-                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm xl:text-base whitespace-nowrap px-2 py-1"
+                className="text-[#030213] hover:text-[#030213]/80 transition-colors font-medium text-sm whitespace-nowrap px-1.5 xl:px-2 py-1"
               >
-                Επικοινωνία
+                {t.header.contact}
               </Link>
             </div>
-            
-            {/* Language Toggle - μικρότερο */}
-            <div className="flex items-center space-x-1 ml-2 xl:ml-4 border-l border-gray-300 pl-2 xl:pl-4 flex-shrink-0">
-              <button className="text-xs xl:text-sm text-[#717182] hover:text-[#030213] font-medium px-1">EN</button>
-              <span className="text-gray-300 text-xs">|</span>
-              <button className="text-xs xl:text-sm text-[#717182] hover:text-[#030213] px-1">EL</button>
+
+            {/* Language Dropdown */}
+            <div className="flex items-center ml-1.5 xl:ml-3 border-l border-gray-300 pl-1.5 xl:pl-3 flex-shrink-0">
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as 'en' | 'el')}
+                className="text-xs xl:text-sm font-medium text-[#030213] bg-transparent border border-gray-300 rounded px-1.5 xl:px-2 py-1 cursor-pointer hover:border-[#030213] focus:outline-none focus:ring-2 focus:ring-[#030213] focus:border-transparent transition-colors"
+              >
+                <option value="en">🇬🇧 EN</option>
+                <option value="el">🇬🇷 ΕΛ</option>
+              </select>
             </div>
-            
-            <Link href="https://mazicare-webapp.vercel.app/signup" className="ml-2 xl:ml-4 flex-shrink-0">
-              <Button variant="default" className="font-medium text-sm xl:text-base px-3 xl:px-4 py-2 whitespace-nowrap">
-                Σύνδεση
+
+            <Link href="https://mazicare-webapp.vercel.app/signup" className="ml-1.5 xl:ml-3 flex-shrink-0">
+              <Button variant="default" className="font-medium text-sm px-2.5 xl:px-4 py-2 whitespace-nowrap">
+                {t.header.login}
               </Button>
             </Link>
           </nav>
@@ -89,7 +96,7 @@ export function Header() {
           <div className="lg:hidden flex items-center gap-2">
             <Link href="https://mazicare-webapp.vercel.app/signup" className="hidden sm:block">
               <Button size="sm" variant="default" className="text-sm">
-                Σύνδεση
+                {t.header.login}
               </Button>
             </Link>
             <Button
@@ -108,60 +115,56 @@ export function Header() {
           <div className="lg:hidden animate-in slide-in-from-top duration-200">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <div className="px-3 py-2 text-sm text-[#717182] border-b pb-3 mb-2 bg-[#f3f3f5] rounded-lg">
-              Επαληθευμένοι επαγγελματίες φροντίδας ηλικιωμένων σε όλη την Ελλάδα
+                {t.header.mobileSubtitle}
               </div>
-              
+
               <div className="space-y-1">
                 <Link
                   href="/find-care"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full text-left px-4 py-3 text-[#030213] hover:bg-[#f3f3f5] transition-colors font-medium rounded-lg"
                 >
-                  Βρείτε Φροντίδα
+                  {t.header.findCare}
                 </Link>
                 <Link
                   href="/for-caregivers"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full text-left px-4 py-3 text-[#030213] hover:bg-[#f3f3f5] transition-colors font-medium rounded-lg"
                 >
-                  Για Φροντιστές
+                  {t.header.forCaregivers}
                 </Link>
                 <Link
                   href="/pricing"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full text-left px-4 py-3 text-[#030213] hover:bg-[#f3f3f5] transition-colors font-medium rounded-lg"
                 >
-                  Τιμολόγηση
+                  {t.header.pricing}
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full text-left px-4 py-3 text-[#030213] hover:bg-[#f3f3f5] transition-colors font-medium rounded-lg"
                 >
-                  Επικοινωνία
+                  {t.header.contact}
                 </Link>
               </div>
-              
-              {/* Language Toggle Mobile */}
+
+              {/* Language Dropdown Mobile */}
               <div className="px-3 py-4 border-t mt-3 pt-4">
-                <div className="flex gap-2">
-                  <Button 
-                    variant="outline" 
-                    className="flex-1 text-sm" 
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    EN
-                  </Button>
-                  <Button 
-                    variant="default" 
-                    className="flex-1 text-sm bg-[#030213]" 
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    EL
-                  </Button>
-                </div>
+                <label className="block text-sm font-medium text-[#717182] mb-2">Language / Γλώσσα</label>
+                <select
+                  value={language}
+                  onChange={(e) => {
+                    setLanguage(e.target.value as 'en' | 'el');
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full text-sm font-medium text-[#030213] bg-white border border-gray-300 rounded-lg px-3 py-2 cursor-pointer hover:border-[#030213] focus:outline-none focus:ring-2 focus:ring-[#030213] focus:border-transparent transition-colors"
+                >
+                  <option value="en">🇬🇧 English</option>
+                  <option value="el">🇬🇷 Ελληνικά</option>
+                </select>
               </div>
-              
+
               <div className="pt-4 border-t">
                 <Link
                   href="https://mazicare-webapp.vercel.app/signup"
@@ -169,7 +172,7 @@ export function Header() {
                   className="block"
                 >
                   <Button className="w-full bg-[#030213] hover:bg-[#030213]/90">
-                    Σύνδεση στο MaziCare
+                    {t.header.loginFull}
                   </Button>
                 </Link>
               </div>
