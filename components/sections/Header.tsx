@@ -38,7 +38,7 @@ export function Header() {
           </Link>
 
           {/* Trust statement - μόνο για μεγάλες οθόνες */}
-          <div className="hidden xl:flex items-center text-sm text-[#717182] mx-4 flex-shrink-0">
+          <div className="hidden md:flex items-center text-sm text-[#717182] mx-4 flex-shrink-0">
             <span className="border-l border-gray-300 pl-4 whitespace-nowrap">
               {t.header.verified}
             </span>
